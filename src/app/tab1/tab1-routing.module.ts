@@ -6,7 +6,15 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
+  },  {
+    path: 'profile',
+    loadChildren: () => import('./settings/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'filter',
+    loadChildren: () => import('./settings/filter/filter.module').then( m => m.FilterPageModule)
   }
+
 ];
 
 @NgModule({

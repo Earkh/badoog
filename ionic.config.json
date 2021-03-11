@@ -1,0 +1,8 @@
+{
+  "name": "BADOOG",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "9ed280aa"
+}

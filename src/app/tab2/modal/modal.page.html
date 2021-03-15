@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>{{ sex }}, {{ age }} años</h2>
+  <h3>{{ size }}</h3>
+  <p>{{ desc }}</p>
+  <ion-button (click)="closeModal()" expand="block" fill="clear" shape="round">
+    Volver
+  </ion-button>
+</ion-content>

@@ -11,20 +11,31 @@
         <ion-card>
           <ion-img src="assets/dog.jpg"></ion-img>
           <ion-card-header>
-            <ion-card-subtitle>Mediano</ion-card-subtitle>
-            <ion-card-title>Lucky</ion-card-title>
+            <ion-card-title>Lucky, 2 años</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            Keep close to Nature's heart... and break clear away, once in
-            awhile, and climb a mountain or spend a week in the woods...
+            <p>Si tu pelota no te cabe en la boca, no es tu pelota</p>
             <br />
-            <ion-button (click)="presentModal()" shape="round" size="small">
-              <ion-icon
-                slot="icon-only"
-                name="add-circle-outline"
-                icon="add-circle-outline"
-              ></ion-icon>
-            </ion-button>
+            <ion-buttons>
+              <ion-fab-button (click)="onClick()" color="success" slot="start">
+                <img src="assets/icon/bone.svg" />
+              </ion-fab-button>
+              <ion-button
+                (click)="presentModal()"
+                shape="round"
+                size="small"
+                color="secondary"
+              >
+                <ion-icon
+                  slot="icon-only"
+                  name="add-circle-outline"
+                  icon="add-circle-outline"
+                ></ion-icon>
+              </ion-button>
+              <ion-fab-button (click)="onClick()" color="danger" slot="end">
+                <img src="assets/icon/poo.svg" />
+              </ion-fab-button>
+            </ion-buttons>
           </ion-card-content>
         </ion-card>
       </ion-col>

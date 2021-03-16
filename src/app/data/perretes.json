@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Lucky",
+        "sex": "macho",
+        "age": 2,
+        "size": "mediano",
+        "desc": "Si tu pelota no te cabe en la boca no es tu pelota",
+        "img": "assets/dog.jpg"
+    },
+    {
+        "name": "Arya",
+        "sex": "hembra",
+        "age": 2,
+        "size": "grande",
+        "desc": "Dejar que los gatos se acerquen a mí",
+        "img": "assets/dog2.jpg"
+    },
+    {
+        "name": "Greta",
+        "sex": "hembra",
+        "age": 9,
+        "size": "pequeño",
+        "desc": "Esa es MI comida",
+        "img": "assets/dog3.jpg"
+    },
+    {
+        "name": "Bimba",
+        "sex": "hembra",
+        "age": 5,
+        "size": "pequeña",
+        "desc": "Suaaaaaaave",
+        "img": "assets/dog4.jpg"
+    },
+    {
+        "name": "Candela",
+        "sex": "hembra",
+        "age": 7,
+        "size": "grande",
+        "desc": "Me encanta comer en tu cama y llenar todo de pelos",
+        "img": "assets/dog5.jpg"
+    },
+    {
+        "name": "Gofio",
+        "sex": "macho",
+        "age": 6,
+        "size": "mediano",
+        "desc": "Alma libre",
+        "img": "assets/dog6.jpg"
+    },
+    {
+        "name": "Togo",
+        "sex": "macho",
+        "age": 1,
+        "size": "pequeño",
+        "desc": "Corro como si me persiguieran siempre",
+        "img": "assets/dog7.jpg"
+    },
+    {
+        "name": "Thor",
+        "sex": "macho",
+        "age": 9,
+        "size": "grande",
+        "desc": "Wow, such food, very very tasty",
+        "img": "assets/dog8.jpg"
+    },
+    {
+        "name": "Luna",
+        "sex": "hembra",
+        "age": 8,
+        "size": "grande",
+        "desc": "Me gustan los sofás y las golosinas",
+        "img": "assets/dog9.jpg"
+    },
+    {
+        "name": "Rex",
+        "sex": "macho",
+        "age": 5,
+        "size": "grande",
+        "desc": "Perro policía",
+        "img": "assets/dog10.jpg"
+    },
+    {
+        "name": "Sansa",
+        "sex": "hembra",
+        "age": 7,
+        "size": "mediano",
+        "desc": "¿Vas a comértelo... ?",
+        "img": "assets/dog11.jpg"
+    },
+    {
+        "name": "Dexter",
+        "sex": "macho",
+        "age": 4,
+        "size": "pequeño",
+        "desc": "Guauuu, guauu, guauuu",
+        "img": "assets/dog12.jpg"
+    }
+]

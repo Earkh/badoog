@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular'
-import { ModalPage } from '../modal/modal.page'
+import perretes from '../../data/perretes.json'
+
 
 @Component({
   selector: 'app-card',
@@ -9,23 +9,13 @@ import { ModalPage } from '../modal/modal.page'
 })
 export class CardPage implements OnInit {
 
-  constructor(private modalController: ModalController) {}
+  dogs: any[] = perretes;
 
-  ngOnInit() {
+  constructor() {
+      console.log(this.dogs)
   }
 
-  async presentModal() {
-    const modal = await this.modalController.create({
-        component: ModalPage,
-        componentProps: {
-            name: 'Lucky',
-            sex: 'Macho',
-            size: 'Mediano',
-            age: '2',
-            desc: 'Keep close to Nature\'s heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods...'
-        }
-    });
-    return await modal.present();
+  ngOnInit() {
   }
 
 }

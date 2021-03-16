@@ -5,40 +5,13 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid fixed>
-    <ion-row>
-      <ion-col size="12" size-md="9" size-lg="6">
-        <ion-card>
-          <ion-img src="assets/dog.jpg"></ion-img>
-          <ion-card-header>
-            <ion-card-title>Lucky, 2 años</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p>Si tu pelota no te cabe en la boca, no es tu pelota</p>
-            <br />
-            <ion-buttons>
-              <ion-fab-button (click)="onClick()" color="success" slot="start">
-                <img src="assets/icon/bone.svg" />
-              </ion-fab-button>
-              <ion-button
-                (click)="presentModal()"
-                shape="round"
-                size="small"
-                color="secondary"
-              >
-                <ion-icon
-                  slot="icon-only"
-                  name="add-circle-outline"
-                  icon="add-circle-outline"
-                ></ion-icon>
-              </ion-button>
-              <ion-fab-button (click)="onClick()" color="danger" slot="end">
-                <img src="assets/icon/poo.svg" />
-              </ion-fab-button>
-            </ion-buttons>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <app-dog
+    *ngFor="let dog of dogs"
+    name="{{dog.name}}"
+    sex="{{dog.sex}}"
+    size="{{dog.size}}"
+    age="{{dog.age}}"
+    desc="{{dog.desc}}"
+    img="{{dog.img}}"
+  ></app-dog>
 </ion-content>

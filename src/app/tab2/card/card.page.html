@@ -6,7 +6,8 @@
 
 <ion-content>
   <app-dog
-    *ngFor="let dog of dogs"
+    *ngFor='let dog of dogs | slice:this.sliceService.getStart():this.sliceService.getEnd()'
+    id="{{dog.id}}"
     name="{{dog.name}}"
     sex="{{dog.sex}}"
     size="{{dog.size}}"

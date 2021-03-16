@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular'
+import { SliceService } from 'src/app/services/slice.service';
 import { ModalPage } from '../modal/modal.page'
 
 @Component({
@@ -9,6 +10,7 @@ import { ModalPage } from '../modal/modal.page'
 })
 export class DogComponent implements OnInit {
 
+    @Input() id: string;
     @Input() name: string;
     @Input() sex: string;
     @Input() age: number;
@@ -16,7 +18,10 @@ export class DogComponent implements OnInit {
     @Input() desc: string;
     @Input() img: string;
 
-  constructor(private modalController: ModalController) { }
+  constructor(
+              private modalController: ModalController,
+              private sliceService: SliceService
+              ) { }
 
   ngOnInit() {}
 
@@ -32,5 +37,15 @@ export class DogComponent implements OnInit {
         }
     });
     return await modal.present();
+  }
+
+  like(event) {
+    console.log("User (UserId) likes " + this.name + "(" + this.id + ")");
+    this.sliceService.increaseS();
+  }
+
+  dislike(event){
+    console.log("User (UserId) dislikes " + this.name + "(" + this.id + ")");
+    this.sliceService.increaseS();
   }
 }

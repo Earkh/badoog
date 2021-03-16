@@ -10,7 +10,7 @@
           <p>{{ desc }}</p>
           <br />
           <ion-buttons>
-            <ion-fab-button (click)="onClick()" color="success" slot="start">
+            <ion-fab-button (click)="like($event)" color="success" slot="start">
               <img src="assets/icon/bone.svg" />
             </ion-fab-button>
             <ion-button
@@ -25,7 +25,7 @@
                 icon="add-circle-outline"
               ></ion-icon>
             </ion-button>
-            <ion-fab-button (click)="onClick()" color="danger" slot="end">
+            <ion-fab-button (click)="dislike($event)" color="danger" slot="end">
               <img src="assets/icon/poo.svg" />
             </ion-fab-button>
           </ion-buttons>

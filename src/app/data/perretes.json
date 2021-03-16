@@ -1,5 +1,6 @@
 [
     {
+        "id": 0,
         "name": "Lucky",
         "sex": "macho",
         "age": 2,
@@ -8,6 +9,7 @@
         "img": "assets/dog.jpg"
     },
     {
+        "id": 1,
         "name": "Arya",
         "sex": "hembra",
         "age": 2,
@@ -16,6 +18,7 @@
         "img": "assets/dog2.jpg"
     },
     {
+        "id": 2,
         "name": "Greta",
         "sex": "hembra",
         "age": 9,
@@ -24,6 +27,7 @@
         "img": "assets/dog3.jpg"
     },
     {
+        "id": 3,
         "name": "Bimba",
         "sex": "hembra",
         "age": 5,
@@ -32,6 +36,7 @@
         "img": "assets/dog4.jpg"
     },
     {
+        "id": 4,
         "name": "Candela",
         "sex": "hembra",
         "age": 7,
@@ -40,6 +45,7 @@
         "img": "assets/dog5.jpg"
     },
     {
+        "id": 5,
         "name": "Gofio",
         "sex": "macho",
         "age": 6,
@@ -48,6 +54,7 @@
         "img": "assets/dog6.jpg"
     },
     {
+        "id": 6,
         "name": "Togo",
         "sex": "macho",
         "age": 1,
@@ -56,6 +63,7 @@
         "img": "assets/dog7.jpg"
     },
     {
+        "id": 7,
         "name": "Thor",
         "sex": "macho",
         "age": 9,
@@ -64,6 +72,7 @@
         "img": "assets/dog8.jpg"
     },
     {
+        "id": 8,
         "name": "Luna",
         "sex": "hembra",
         "age": 8,
@@ -72,6 +81,7 @@
         "img": "assets/dog9.jpg"
     },
     {
+        "id": 9,
         "name": "Rex",
         "sex": "macho",
         "age": 5,
@@ -80,6 +90,7 @@
         "img": "assets/dog10.jpg"
     },
     {
+        "id": 10,
         "name": "Sansa",
         "sex": "hembra",
         "age": 7,
@@ -88,6 +99,7 @@
         "img": "assets/dog11.jpg"
     },
     {
+        "id": 11,
         "name": "Dexter",
         "sex": "macho",
         "age": 4,

@@ -2,6 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular'
 import { SliceService } from 'src/app/services/slice.service';
 import { ModalPage } from '../modal/modal.page'
+import { environment } from '../../../environments/environment'
+
+const URL = environment.URL
 
 @Component({
     selector: 'app-dog',
@@ -18,12 +21,17 @@ export class DogComponent implements OnInit {
     @Input() desc: string;
     @Input() img: string;
 
+
     constructor(
         private modalController: ModalController,
         private sliceService: SliceService
-    ) { }
+    ) {
 
-    ngOnInit() { }
+    }
+
+    ngOnInit() {
+
+    }
 
     async presentModal() {
         const modal = await this.modalController.create({
@@ -56,4 +64,5 @@ export class DogComponent implements OnInit {
             this.sliceService.increaseS();
         }, 600)
     }
+
 }

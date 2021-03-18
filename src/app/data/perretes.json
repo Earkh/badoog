@@ -1,7 +1,7 @@
 [
     {
-        "id": 0,
         "name": "Lucky",
+        "mail": "airam.dev@gmail.com",
         "sex": "macho",
         "age": 2,
         "size": "mediano",
@@ -9,8 +9,8 @@
         "img": "assets/dog.jpg"
     },
     {
-        "id": 1,
         "name": "Arya",
+        "mail": "airam.cs90@gmail.com",
         "sex": "hembra",
         "age": 2,
         "size": "grande",
@@ -18,8 +18,8 @@
         "img": "assets/dog2.jpg"
     },
     {
-        "id": 2,
         "name": "Greta",
+        "mail": "airam.cs90@gmail.com",
         "sex": "hembra",
         "age": 9,
         "size": "pequeño",
@@ -27,8 +27,8 @@
         "img": "assets/dog3.jpg"
     },
     {
-        "id": 3,
         "name": "Bimba",
+        "mail": "airam.cs90@gmail.com",
         "sex": "hembra",
         "age": 5,
         "size": "pequeña",
@@ -36,8 +36,8 @@
         "img": "assets/dog4.jpg"
     },
     {
-        "id": 4,
         "name": "Candela",
+        "mail": "airam.cs90@gmail.com",
         "sex": "hembra",
         "age": 7,
         "size": "grande",
@@ -45,8 +45,8 @@
         "img": "assets/dog5.jpg"
     },
     {
-        "id": 5,
         "name": "Gofio",
+        "mail": "test@test.com",
         "sex": "macho",
         "age": 6,
         "size": "mediano",
@@ -54,8 +54,8 @@
         "img": "assets/dog6.jpg"
     },
     {
-        "id": 6,
         "name": "Togo",
+        "mail": "test1@test.com",
         "sex": "macho",
         "age": 1,
         "size": "pequeño",
@@ -63,8 +63,8 @@
         "img": "assets/dog7.jpg"
     },
     {
-        "id": 7,
         "name": "Thor",
+        "mail": "test2@test.com",
         "sex": "macho",
         "age": 9,
         "size": "grande",
@@ -72,8 +72,8 @@
         "img": "assets/dog8.jpg"
     },
     {
-        "id": 8,
         "name": "Luna",
+        "mail": "test3@test.com",
         "sex": "hembra",
         "age": 8,
         "size": "grande",
@@ -81,8 +81,8 @@
         "img": "assets/dog9.jpg"
     },
     {
-        "id": 9,
         "name": "Rex",
+        "mail": "test4@test.com",
         "sex": "macho",
         "age": 5,
         "size": "grande",
@@ -90,8 +90,8 @@
         "img": "assets/dog10.jpg"
     },
     {
-        "id": 10,
         "name": "Sansa",
+        "mail": "test5@test.com",
         "sex": "hembra",
         "age": 7,
         "size": "mediano",
@@ -99,8 +99,8 @@
         "img": "assets/dog11.jpg"
     },
     {
-        "id": 11,
         "name": "Dexter",
+        "mail": "test6@test.com",
         "sex": "macho",
         "age": 4,
         "size": "pequeño",

@@ -1,0 +1,109 @@
+[{
+    "name": "Lucky",
+    "email": "airam.dev@gmail.com",
+    "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+    "age": 2,
+    "size": "mediano",
+    "sex": "macho",
+    "desc": "Si tu pelota no te cabe en la boca no es tu pelota",
+    "img": "assets/dog.jpg"
+},{
+    "name": "Arya",
+    "email": "airam.cs90@gmail.com",
+    "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+    "age": 2,
+    "size": "grande",
+    "sex": "hembra",
+    "desc": "Dejad que los gatos se acerquen a mí",
+    "img": "assets/dog2.jpg"
+},{
+    "name": "Greta",
+    "email": "test@test.com",
+    "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+    "age": 9,
+    "size": "pequeño",
+    "sex": "hembra",
+    "desc": "Esa es MI comida",
+    "img": "assets/dog3.jpg"
+},{
+    "name": "Bimba",
+    "email": "test1@test.com",
+    "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+    "age": 5,
+    "size": "pequeño",
+    "sex": "hembra",
+    "desc": "Suaaaaaaave",
+    "img": "assets/dog4.jpg"
+},{
+    "name": "Candela",
+    "email": "test2@test.com",
+    "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+    "age": 7,
+    "size": "mediano",
+    "sex": "hembra",
+    "desc": "Me encanta comer en tu cama y llenar todo de pelos",
+    "img": "assets/dog5.jpg"
+},{
+    "name": "Gofio",
+    "email": "test3@test.com",
+    "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+    "age": 6,
+    "size": "mediano",
+    "sex": "macho",
+    "desc": "Alma libre",
+    "img": "assets/dog6.jpg"
+},{
+    "name": "Togo",
+    "email": "test4@test.com",
+    "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+    "age": 1,
+    "size": "mediano",
+    "sex": "macho",
+    "desc": "Corro como si me persiguieran siempre",
+    "img": "assets/dog7.jpg"
+},{
+    "name": "Doge",
+    "email": "test5@test.com",
+    "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+    "age": 9,
+    "size": "grande",
+    "sex": "macho",
+    "desc": "Wow, such food, very very tasty",
+    "img": "assets/dog8.jpg"
+},{
+    "name": "Luna",
+    "email": "test6@test.com",
+    "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+    "age": 8,
+    "size": "grande",
+    "sex": "hembra",
+    "desc": "Me gustan los sofás y las golosinas",
+    "img": "assets/dog9.jpg"  
+},{
+    "name": "Rex",
+    "email": "test7@test.com",
+    "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+    "age": 5,
+    "size": "grande",
+    "sex": "macho",
+    "desc": "Perro policía",
+    "img": "assets/dog10.jpg" 
+},{
+    "name": "Sansa",
+    "email": "test7@test.com",
+    "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+    "age": 7,
+    "size": "mediano",
+    "sex": "hembra",
+    "desc": "¿Vas a comértelo... ?",
+    "img": "assets/dog11.jpg" 
+},{
+    "name": "Dexter",
+    "email": "test8@test.com",
+    "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+    "age": 4,
+    "size": "pequeño",
+    "sex": "macho",
+    "desc": "Woooff, woooff, woooooff",
+    "img": "assets/dog12.jpg" 
+}]

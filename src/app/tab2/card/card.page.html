@@ -7,12 +7,12 @@
 <ion-content>
   <app-dog
     *ngFor='let dog of dogs | slice:this.sliceService.getStart():this.sliceService.getEnd()'
-    id="{{dog.id}}"
+    id="{{dog._id}}"
     name="{{dog.name}}"
     sex="{{dog.sex}}"
     size="{{dog.size}}"
     age="{{dog.age}}"
     desc="{{dog.desc}}"
-    img="{{dog.img}}"
+    img="http://localhost:3000/user/imagen/{{dog._id}}/{{dog._id}}.jpg"
   ></app-dog>
 </ion-content>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SliceService } from 'src/app/services/slice.service';
-import perretes from '../../data/perretes.json'
+import { UsersService } from 'src/app/services/users.service';
 
 
 @Component({
@@ -10,12 +10,21 @@ import perretes from '../../data/perretes.json'
 })
 export class CardPage implements OnInit {
 
-    dogs: any[] = perretes;
+    dogs: any[] = [];
 
-    constructor(private sliceService: SliceService) { }
+    constructor(
+        private sliceService: SliceService,
+        private userService: UsersService
+    ) { }
 
     start: number = this.sliceService.getStart()
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.userService.getUsers()
+            .subscribe(res => {
+                this.dogs.push(...res.users);
+            })
+        console.log(this.dogs)
+    }
 }
 

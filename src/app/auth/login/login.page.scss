@@ -5,3 +5,32 @@ ion-button{
 a{
     color: #fff;
 }
+
+.mainSlide, .mainSlide ion-slide {
+    width: 100%;
+    min-height: 100%;
+}
+
+ion-toggle {
+    --background: #3880ff;
+    --handle-background-checked: #fff;
+    --background-checked: #EB445A;
+  
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}

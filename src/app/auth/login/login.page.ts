@@ -1,9 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
-import { IonSlides } from '@ionic/angular';
+import { IonSlides, NavController } from '@ionic/angular';
 import { UsersService } from 'src/app/services/users.service';
-import { AuthService } from '../auth.service';
+import { UiServiceService } from 'src/app/services/ui-service.service'
 
 @Component({
     selector: 'app-login',
@@ -20,15 +19,25 @@ export class LoginPage {
         password: '123456'
     };
 
-    constructor(private userService: UsersService) { }
+    constructor(
+        private userService: UsersService,
+        private navController: NavController,
+        private UiService: UiServiceService
+    ) { }
 
     ngAfterViewInit() {
         this.slides.lockSwipes(true);
     }
 
-    login(fLogin: NgForm) {
-        console.log(fLogin.valid);
-        console.log(this.loginUser);
+    async login(fLogin: NgForm) {
+        if (fLogin.invalid) { return }
+
+        const validUser = await this.userService.login(this.loginUser.email, this.loginUser.password);
+        if (validUser) {
+            this.navController.navigateRoot('/main/tabs/tab2', { animated: true })
+        } else {
+            this.UiService.presentAlert('Contraseña incorrecta');
+        }
     }
 
     register(fRegister: NgForm) {

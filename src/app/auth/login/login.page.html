@@ -22,10 +22,15 @@
 </ion-content> -->
 
 <ion-content>
-    <ion-slides class="mainSlide" #slide>
-        <ion-slide>
+    <ion-slides class="mainSlide" #slide style="padding-top: 1em;">
+        <ion-slide>     
             <form (ngSubmit)="login(fLogin)" #fLogin="ngForm">
                 <ion-grid fixed>
+                    <ion-row>
+                        <ion-col size="12">
+                            <ion-img src="assets/icon/badoog-fondo-claro.png"></ion-img>
+                        </ion-col>
+                    </ion-row>
                     <ion-row>
                         <ion-col>                      
                             <ion-list>                          
@@ -69,6 +74,7 @@
                                     <ion-label>Email</ion-label>
                                     <ion-input name="email" 
                                                 type="email"
+                                                [(ngModel)]="registerData.email"
                                                 required>
                                     </ion-input>
                                 </ion-item>
@@ -76,6 +82,7 @@
                                     <ion-label>Password</ion-label>
                                     <ion-input name="password"
                                                 type="password"
+                                                [(ngModel)]="registerData.password"
                                                 required>
                                     </ion-input>
                                 </ion-item>    
@@ -83,6 +90,7 @@
                                     <ion-label>Nombre</ion-label>
                                     <ion-input name="nombre"
                                                 type="text"
+                                                [(ngModel)]="registerData.name"
                                                 required>
                                     </ion-input>
                                 </ion-item>
@@ -90,6 +98,7 @@
                                     <ion-label>Edad</ion-label>
                                     <ion-input name="age"
                                                 type="text"
+                                                [(ngModel)]="registerData.age"
                                                 required>
                                     </ion-input>
                                 </ion-item>
@@ -97,17 +106,17 @@
                                         <ion-radio-group>
                                             <ion-item>
                                                 <ion-label>Pequeño</ion-label>
-                                                <ion-radio slot="start" value="pequeño"></ion-radio>
+                                                <ion-radio slot="start" ng-model="registerData.size" value="pequeño"></ion-radio>
                                             </ion-item>
                                         
                                             <ion-item>
                                                 <ion-label>Mediano</ion-label>
-                                                <ion-radio slot="start" value="mediano"></ion-radio>
+                                                <ion-radio slot="start" ng-model="registerData.size" value="mediano"></ion-radio>
                                             </ion-item>
                                         
                                             <ion-item>
                                                 <ion-label>Grande</ion-label>
-                                                <ion-radio slot="start" value="grande"></ion-radio>
+                                                <ion-radio slot="start" ng-model="registerData.size" value="grande"></ion-radio>
                                             </ion-item>
                                         </ion-radio-group>
                                     </ion-list>
@@ -120,6 +129,7 @@
                                     <ion-label position="floating">Descripción</ion-label>
                                     <ion-textarea name="desc"
                                                 type="text"
+                                                [(ngModel)]="registerData.desc"
                                                 required>
                                     </ion-textarea>
                                 </ion-item>

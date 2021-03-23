@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { IonSlides, NavController } from '@ionic/angular';
 import { UsersService } from 'src/app/services/users.service';
 import { UiServiceService } from 'src/app/services/ui-service.service'
+import { User } from 'src/app/interfaces/interfaces';
 
 @Component({
     selector: 'app-login',
@@ -18,6 +19,16 @@ export class LoginPage {
         email: 'airam.dev@gmail.com',
         password: '123456'
     };
+
+    registerData: User = {
+        name: "Lilu",
+        email: "Fizsprocket",
+        password: "123456",
+        age: 4,
+        size: "mediano",
+        sex: "hembra",
+        desc: "Natural and quirky. Warm and fluffy."
+    }
 
     constructor(
         private userService: UsersService,
@@ -40,7 +51,18 @@ export class LoginPage {
         }
     }
 
-    register(fRegister: NgForm) {
+    async register(fRegister: NgForm) {
+
+        if (fRegister.invalid) { return }
+
+        const valido = await this.userService.register(this.registerData);
+
+        if (valido) {
+            this.navController.navigateRoot('/main/tabs/tab1', { animated: true })
+        } else {
+            this.UiService.presentAlert('Ya existe un usuario con ese correo');
+        }
+
         console.log(fRegister.valid)
     }
 

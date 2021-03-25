@@ -63,6 +63,7 @@ export class LoginPage {
             this.UiService.presentAlert('Ya existe un usuario con ese correo');
         }
 
+        console.log(this.registerData)
         console.log(fRegister.valid)
     }
 

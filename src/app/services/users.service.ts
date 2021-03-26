@@ -57,6 +57,24 @@ export class UsersService {
         })
     }
 
+    update(usuario: User) {
+
+        return new Promise(resolve => {
+            this.http.post(`${URL}/user/update`, usuario)
+                .subscribe(resp => {
+                    console.log(resp);
+                    if (resp['ok']) {
+                        this.saveToken(resp['token']);
+                        resolve(true);
+                    } else {
+                        this.token = null;
+                        this.storage.clear();
+                        resolve(false);
+                    }
+                });
+        })
+    }
+
     getUser() {
         return { ...this.user }
     }

@@ -48,25 +48,76 @@
       </ion-col>
     </ion-row>
   
-    <form>
+    <form (ngSubmit)="update()" #fUpdate="ngForm">
         <ion-row>
           <ion-col>
             
               <ion-list>
                 
                 <ion-item>
-                  <ion-label>Email</ion-label>
-                  <ion-input name="email"
-                             type="email"
-                             required></ion-input>
+                    <ion-label>Email</ion-label>
+                    <ion-input name="email" 
+                                type="email"
+                                [(ngModel)]="user.email"
+                                required>
+                    </ion-input>
                 </ion-item>
-  
+                <!-- <ion-item>
+                    <ion-label>Password</ion-label>
+                    <ion-input name="password"
+                                type="password"
+                                [(ngModel)]="user.password"
+                                required>
+                    </ion-input>
+                </ion-item>     -->
                 <ion-item>
-                  <ion-label>Nombre</ion-label>
-                  <ion-input name="nombre"
-                             type="text"
-                             required></ion-input>
+                    <ion-label>Nombre</ion-label>
+                    <ion-input name="nombre"
+                                type="text"
+                                [(ngModel)]="user.name"
+                                required>
+                    </ion-input>
                 </ion-item>
+                <ion-item>
+                    <ion-label>Edad</ion-label>
+                    <ion-input name="age"
+                                type="text"
+                                [(ngModel)]="user.age"
+                                required>
+                    </ion-input>
+                </ion-item>
+                    <ion-list>
+                        <ion-radio-group>
+                            <ion-item>
+                                <ion-label>Pequeño</ion-label>
+                                <ion-radio slot="start" ng-model="user.size" value="pequeño"></ion-radio>
+                            </ion-item>
+                        
+                            <ion-item>
+                                <ion-label>Mediano</ion-label>
+                                <ion-radio slot="start" ng-model="user.size" value="mediano"></ion-radio>
+                            </ion-item>
+                        
+                            <ion-item>
+                                <ion-label>Grande</ion-label>
+                                <ion-radio slot="start" ng-model="user.size" value="grande"></ion-radio>
+                            </ion-item>
+                        </ion-radio-group>
+                    </ion-list>
+                <ion-item>
+                    <ion-label>Macho</ion-label>
+                    <ion-toggle name="apple"></ion-toggle>
+                    <ion-label class="ion-text-right">Hembra</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">Descripción</ion-label>
+                    <ion-textarea name="desc"
+                                type="text"
+                                [(ngModel)]="user.desc"
+                                required>
+                    </ion-textarea>
+                </ion-item>
+            
   
   
               </ion-list>
@@ -76,7 +127,7 @@
         <ion-row>
           <ion-col text-center>
             <ion-button type="submit"
-                        color="tertiary"
+                        color="primary"
                         shape="round">
             Actualizar
           </ion-button>

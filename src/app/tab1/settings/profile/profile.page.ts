@@ -27,6 +27,10 @@ export class ProfilePage implements OnInit {
 
     }
 
+    update() {
+        this.userService.update(this.user)
+    }
+
     async presentAlertConfirm() {
         const alert = await this.alertController.create({
             cssClass: 'my-custom-class',
@@ -51,4 +55,5 @@ export class ProfilePage implements OnInit {
 
         await alert.present();
     }
+
 }

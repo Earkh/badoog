@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { AlertController } from '@ionic/angular'
 import { User } from 'src/app/interfaces/interfaces';
+import { UiServiceService } from 'src/app/services/ui-service.service';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -11,15 +13,23 @@ import { UsersService } from 'src/app/services/users.service';
 export class ProfilePage implements OnInit {
 
     constructor(public alertController: AlertController,
-        private userService: UsersService) { }
+        private userService: UsersService,
+        private UiService: UiServiceService) { }
 
     user: User = {};
+
+    checkSex: boolean;
 
 
     ngOnInit() {
 
         this.user = this.userService.getUser();
-        console.log(this.user);
+        console.log(this.user)
+        if (this.user.sex == "hembra") {
+            this.checkSex = true;
+        } else {
+            this.checkSex = false;
+        }
 
     }
 
@@ -27,33 +37,16 @@ export class ProfilePage implements OnInit {
 
     }
 
-    update() {
-        this.userService.update(this.user)
-    }
+    async update(fUpdate: NgForm) {
 
-    async presentAlertConfirm() {
-        const alert = await this.alertController.create({
-            cssClass: 'my-custom-class',
-            header: '¿Estás seguro?',
-            message: 'Esta acción es irreversible',
-            buttons: [
-                {
-                    text: 'Cancelar',
-                    role: 'cancel',
-                    cssClass: 'secondary',
-                    handler: (blah) => {
-                        console.log('Confirm Cancel: blah');
-                    }
-                }, {
-                    text: 'Eliminar',
-                    handler: () => {
-                        console.log('Confirm Okay');
-                    }
-                }
-            ]
-        });
+        if (fUpdate.invalid) return;
 
-        await alert.present();
+        const update = await this.userService.update(this.user);
+        if (update) {
+            this.UiService.presentToast('Perfil actualizado');
+        } else {
+            this.UiService.presentToast('No se pudo actualizar');
+        }
     }
 
 }

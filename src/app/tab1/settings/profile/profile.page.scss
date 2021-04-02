@@ -5,3 +5,16 @@ ion-button {
 .my-custom-class .alert-wrapper {
   background: #e5e5e5;
 }
+
+ion-toggle {
+    --background: #3880ff;
+    --handle-background-checked: #fff;
+    --background-checked: #EB445A;
+  
+}
+
+ion-avatar {
+    margin: .5em auto 0 auto;
+    height: 20vh;
+    width: 42vw;
+}

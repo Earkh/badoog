@@ -5,6 +5,10 @@ import { UsersService } from 'src/app/services/users.service';
 import { UiServiceService } from 'src/app/services/ui-service.service'
 import { User } from 'src/app/interfaces/interfaces';
 
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx'
+
+declare var window: any;
+
 @Component({
     selector: 'app-login',
     templateUrl: './login.page.html',
@@ -33,7 +37,8 @@ export class LoginPage {
     constructor(
         private userService: UsersService,
         private navController: NavController,
-        private UiService: UiServiceService
+        private UiService: UiServiceService,
+        private camera: Camera
     ) { }
 
     ngAfterViewInit() {
@@ -80,5 +85,26 @@ export class LoginPage {
         this.slides.lockSwipes(true);
     }
 
+    camara() {
+        const options: CameraOptions = {
+            quality: 100,
+            destinationType: this.camera.DestinationType.FILE_URI,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE,
+            correctOrientation: true,
+            sourceType: this.camera.PictureSourceType.CAMERA
+        }
+
+        this.camera.getPicture(options).then((imageData) => {
+            // imageData is either a base64 encoded string or a file URI
+            // If it's base64 (DATA_URL):
+
+            const img = window.Ionic.WebView.convertFileSrc(imageData);
+            console.log(img)
+
+        }, (err) => {
+            // Handle error
+        });
+    }
 
 }

@@ -32,23 +32,17 @@
   
   <ion-content>
   
-    <ion-row class="top-20">
-      
+    <ion-row class="top-30">
       <ion-col size="12" text-center>
-        <img src="assets/avatars/av-8.png" class="img-avatar">
-      </ion-col>
-  
-    </ion-row>
-  
-    <ion-row class="top-20">
-      <ion-col size="12" text-center>
-        <ion-label>
-          <h1>Actualizar perfil</h1>
-        </ion-label>
+        <ion-avatar>
+            <img src="http://localhost:3000/user/imagen/{{user._id}}/{{user._id}}.jpg">
+        </ion-avatar>
       </ion-col>
     </ion-row>
   
-    <form (ngSubmit)="update()" #fUpdate="ngForm">
+
+    
+    <form (ngSubmit)="update(fUpdate)" #fUpdate>
         <ion-row>
           <ion-col>
             
@@ -87,27 +81,27 @@
                     </ion-input>
                 </ion-item>
                     <ion-list>
-                        <ion-radio-group>
+                        <ion-radio-group [(ngModel)]="user.size" name="size">
                             <ion-item>
                                 <ion-label>Pequeño</ion-label>
-                                <ion-radio slot="start" ng-model="user.size" value="pequeño"></ion-radio>
+                                <ion-radio slot="start" value="pequeño"></ion-radio>
                             </ion-item>
                         
                             <ion-item>
                                 <ion-label>Mediano</ion-label>
-                                <ion-radio slot="start" ng-model="user.size" value="mediano"></ion-radio>
+                                <ion-radio slot="start" value="mediano"></ion-radio>
                             </ion-item>
                         
                             <ion-item>
                                 <ion-label>Grande</ion-label>
-                                <ion-radio slot="start" ng-model="user.size" value="grande"></ion-radio>
+                                <ion-radio slot="start" value="grande"></ion-radio>
                             </ion-item>
                         </ion-radio-group>
                     </ion-list>
-                <ion-item>
+                <ion-item >
                     <ion-label>Macho</ion-label>
-                    <ion-toggle name="apple"></ion-toggle>
-                    <ion-label class="ion-text-right">Hembra</ion-label>
+                    <ion-toggle [(ngModel)]="checkSex" name="sex"></ion-toggle>
+                    <ion-label class="ion-text-right">Hembra</ion-label> <!-- TODO Aplicar a la BBDD -->
                 </ion-item>
                 <ion-item>
                     <ion-label position="floating">Descripción</ion-label>

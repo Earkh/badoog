@@ -5,6 +5,9 @@ import { User } from 'src/app/interfaces/interfaces';
 import { UiServiceService } from 'src/app/services/ui-service.service';
 import { UsersService } from 'src/app/services/users.service';
 
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
+
 @Component({
     selector: 'app-profile',
     templateUrl: './profile.page.html',
@@ -14,9 +17,12 @@ export class ProfilePage implements OnInit {
 
     constructor(public alertController: AlertController,
         private userService: UsersService,
-        private UiService: UiServiceService) { }
+        private UiService: UiServiceService,
+        private camera: Camera) { }
 
     user: User = {};
+
+    imagenTemp: any
 
     checkSex: boolean;
 
@@ -35,7 +41,45 @@ export class ProfilePage implements OnInit {
 
     logout() {
 
+        this.userService.logout();
     }
+
+    camara() {
+        const options: CameraOptions = {
+            quality: 60,
+            destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE,
+            correctOrientation: true,
+            sourceType: this.camera.PictureSourceType.CAMERA
+        }
+
+        this.camera.getPicture(options).then((data) => {
+            const image = 'data:image/jpg;base64,' + data;
+            this.imagenTemp = image;
+            this.userService.imageUpload(image)
+        }, (err) => console.log(err));
+
+    }
+
+    library() {
+        const options: CameraOptions = {
+            quality: 60,
+            destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE,
+            correctOrientation: true,
+            sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+        }
+
+        this.camera.getPicture(options).then((data) => {
+            const image = 'data:image/jpg;base64,' + data;
+            this.imagenTemp = image;
+        }, (err) => console.log(err));
+
+    }
+
+
 
     async update(fUpdate: NgForm) {
 

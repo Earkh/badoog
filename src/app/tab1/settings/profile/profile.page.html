@@ -35,7 +35,7 @@
     <ion-row class="top-30">
       <ion-col size="12" text-center>
         <ion-avatar>
-            <img src="http://localhost:3000/user/imagen/{{user._id}}/{{user._id}}.jpg">
+            <img src="{{imagenTemp}}">
         </ion-avatar>
       </ion-col>
     </ion-row>
@@ -47,6 +47,24 @@
           <ion-col>
             
               <ion-list>
+                <ion-col size="6">
+                    <ion-button expand="full"
+                                shape="round"
+                                (click)="camara()"
+                                color="primary">
+                      <ion-icon slot="start" name="camera"></ion-icon>
+                      Cámara
+                    </ion-button>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-button expand="full"
+                                shape="round"
+                                (click)="library()"
+                                color="primary">
+                      <ion-icon slot="start" name="images"></ion-icon>
+                      Galería
+                    </ion-button>
+                </ion-col>
                 
                 <ion-item>
                     <ion-label>Email</ion-label>

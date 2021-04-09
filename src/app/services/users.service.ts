@@ -5,6 +5,8 @@ import { User, userResponse } from '../interfaces/interfaces';
 import { Storage } from '@ionic/storage';
 import { NavController } from '@ionic/angular';
 
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
+
 const URL = environment.URL;
 
 @Injectable({
@@ -17,7 +19,8 @@ export class UsersService {
 
     constructor(private http: HttpClient,
         private storage: Storage,
-        private navController: NavController) { }
+        private navController: NavController,
+        private fileTransfer: FileTransfer) { }
 
 
     login(email: string, password: string) {
@@ -37,6 +40,13 @@ export class UsersService {
                     }
                 })
         });
+    }
+
+    logout() {
+        this.token = null;
+        this.user = null;
+        this.storage.clear();
+        this.navController.navigateRoot('', { animated: true });
     }
 
     register(usuario: User) {
@@ -74,6 +84,24 @@ export class UsersService {
                     }
                 });
         });
+    }
+
+    imageUpload(img: string) {
+
+        const options: FileUploadOptions = {
+            fileKey: 'img',
+            headers: {
+                'x-token': this.token
+            }
+        }
+
+        const fileTransfer: FileTransferObject = this.fileTransfer.create();
+        fileTransfer.upload(img, `${URL}/user/upload`, options)
+            .then(data => {
+                console.log(data);
+            }).catch(err => {
+                console.log('Error', err);
+            });
     }
 
     getUser() {
@@ -120,4 +148,5 @@ export class UsersService {
     getUsers() {
         return this.http.get<userResponse>(`${URL}/user`);
     }
+
 }

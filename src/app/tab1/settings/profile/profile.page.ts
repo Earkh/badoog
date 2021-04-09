@@ -6,7 +6,6 @@ import { UiServiceService } from 'src/app/services/ui-service.service';
 import { UsersService } from 'src/app/services/users.service';
 
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
-import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 
 @Component({
     selector: 'app-profile',
@@ -75,6 +74,7 @@ export class ProfilePage implements OnInit {
         this.camera.getPicture(options).then((data) => {
             const image = 'data:image/jpg;base64,' + data;
             this.imagenTemp = image;
+            this.userService.imageUpload(image);
         }, (err) => console.log(err));
 
     }

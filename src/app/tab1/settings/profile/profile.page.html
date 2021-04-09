@@ -34,13 +34,11 @@
   
     <ion-row class="top-30">
       <ion-col size="12" text-center>
-        <ion-avatar>
-            <img src="{{imagenTemp}}">
-        </ion-avatar>
+        <ion-avatar><img src="{{imagenTemp}}" *ngIf="imagenTemp"><img src="http://192.168.1.140:3000/user/imagen/{{user._id}}/{{user._id}}.jpg" *ngIf="!imagenTemp"></ion-avatar>
       </ion-col>
     </ion-row>
   
-
+    <!-- <img src="{{http://192.168.1.140:3000/user/imagen/{{user._id}}/{{user._id}}.jpg}}" ng-show="!imagenTemp"> -->
     
     <form (ngSubmit)="update(fUpdate)" #fUpdate>
         <ion-row>

@@ -113,6 +113,10 @@ export class UsersService {
         await this.storage.set('token', token)
     }
 
+    async saveFilters(filters: string) {
+        await this.storage.set('filters', filters)
+    }
+
     async loadToken() {
         this.token = await this.storage.get('token') || null;
     }

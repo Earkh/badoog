@@ -7,4 +7,65 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+    <form (ngSubmit)="saveFilters()" #fFilters>
+        <ion-row>
+          <ion-col>
+              <ion-list>   
+                <ion-item>
+                    <ion-label>Edad</ion-label>
+                    <ion-range id="dual-range" min="0" max="18" dual-knobs pin color="primary" [(ngModel)]="filter.age" name="age">
+                    </ion-range>
+                </ion-item>
+              </ion-list>
+                <ion-list>
+                    <ion-label>Tamaño</ion-label>
+                    <ion-radio-group [(ngModel)]="filter.size" name="size">
+                        <ion-item>
+                            <ion-label>Pequeño</ion-label>
+                            <ion-radio slot="start" value="pequeño"></ion-radio>
+                        </ion-item>
+                    
+                        <ion-item>
+                            <ion-label>Mediano</ion-label>
+                            <ion-radio slot="start" value="mediano"></ion-radio>
+                        </ion-item>
+                    
+                        <ion-item>
+                            <ion-label>Grande</ion-label>
+                            <ion-radio slot="start" value="grande"></ion-radio>
+                        </ion-item>
+                    </ion-radio-group>
+                </ion-list>
+                <ion-list>
+                    <ion-label>Sexo</ion-label>
+                    <ion-radio-group [(ngModel)]="filter.sex" name="sex">
+                        <ion-item>
+                            <ion-label>Hembra</ion-label>
+                            <ion-radio slot="start" value="hembra"></ion-radio>
+                        </ion-item>
+                    
+                        <ion-item>
+                            <ion-label>Indiferente</ion-label>
+                            <ion-radio slot="start" value="indiferente"></ion-radio>
+                        </ion-item>
+                    
+                        <ion-item>
+                            <ion-label>Macho</ion-label>
+                            <ion-radio slot="start" value="macho"></ion-radio>
+                        </ion-item>
+                    </ion-radio-group>
+                </ion-list>
+                <ion-row>
+                    <ion-col text-center>
+                      <ion-button type="submit"
+                                  color="primary"
+                                  shape="round">
+                      Actualizar
+                    </ion-button>
+                  </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-content>

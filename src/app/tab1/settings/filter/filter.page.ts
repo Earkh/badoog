@@ -32,7 +32,7 @@ export class FilterPage implements OnInit {
         this.userFilters.maxAge = this.filter.age.upper;
         this.userFilters.size = this.filter.size;
         this.userFilters.sex = this.filter.sex
-        console.log(this.filter);
+        console.log(this.userFilters);
         this.userService.saveFilters(this.userFilters);
     }
 }

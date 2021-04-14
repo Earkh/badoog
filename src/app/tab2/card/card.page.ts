@@ -19,12 +19,20 @@ export class CardPage implements OnInit {
 
     start: number = this.sliceService.getStart()
 
-    ngOnInit() {
+    async ngOnInit() {
+        try {
+            const filters = await this.userService.getFilters();
+            console.log("OnInit", filters);
+        } catch (error) {
+            console.error(error);
+        }
         this.userService.getUsers()
             .subscribe(res => {
                 this.dogs.push(...res.users);
             })
         console.log(this.dogs)
     }
+
+
 }
 

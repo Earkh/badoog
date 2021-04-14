@@ -15,6 +15,12 @@ const URL = environment.URL;
 export class UsersService {
 
     token: string = null;
+    filters: any = {
+        sex: null,
+        size: null,
+        minAge: null,
+        maxAge: null
+    }
     private user: User = {};
 
     constructor(private http: HttpClient,
@@ -117,6 +123,16 @@ export class UsersService {
         await this.storage.set('filters', filters)
     }
 
+    async getFilters() {
+        const filters = await this.storage.get('filters');
+        this.filters.sex = filters.sex;
+        this.filters.size = filters.size;
+        this.filters.minAge = filters.minAge;
+        this.filters.maxAge = filters.maxAge;
+
+        return filters;
+    }
+
     async loadToken() {
         this.token = await this.storage.get('token') || null;
     }
@@ -150,7 +166,7 @@ export class UsersService {
     }
 
     getUsers() {
-        return this.http.get<userResponse>(`${URL}/user`);
+        return this.http.get<userResponse>(`${URL}/user/${this.filters.sex}/${this.filters.size}/${this.filters.minAge}/${this.filters.maxAge}`);
     }
 
 }

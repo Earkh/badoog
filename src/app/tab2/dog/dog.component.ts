@@ -2,7 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular'
 import { SliceService } from 'src/app/services/slice.service';
 import { ModalPage } from '../modal/modal.page'
-import { environment } from '../../../environments/environment'
+import { environment } from '../../../environments/environment';
+import { UsersService } from 'src/app/services/users.service';
 
 const URL = environment.URL
 
@@ -24,7 +25,8 @@ export class DogComponent implements OnInit {
 
     constructor(
         private modalController: ModalController,
-        private sliceService: SliceService
+        private sliceService: SliceService,
+        private usersService: UsersService
     ) {
 
     }
@@ -48,7 +50,11 @@ export class DogComponent implements OnInit {
     }
 
     like(event) {
-        console.log("User (UserId) likes " + this.name + "(" + this.id + ")");
+        let user = this.usersService.getUser();
+        let userId = user._id;
+        this.usersService.saveLike(this.id, userId);
+        this.usersService.checkIfMatch(this.id, userId);
+        console.log(userId, " likes ", this.id);
         document.getElementById('card').classList.remove('animate__fadeInRight')
         document.getElementById('card').classList.add('animate__fadeOutLeft')
         setTimeout(() => {
@@ -57,7 +63,6 @@ export class DogComponent implements OnInit {
     }
 
     dislike(event) {
-        console.log("User (UserId) dislikes " + this.name + "(" + this.id + ")");
         document.getElementById('card').classList.remove('animate__fadeInRight')
         document.getElementById('card').classList.add('animate__fadeOutLeft')
         setTimeout(() => {

@@ -125,6 +125,7 @@ export class UsersService {
 
     async getFilters() {
         const filters = await this.storage.get('filters');
+
         this.filters.sex = filters.sex;
         this.filters.size = filters.size;
         this.filters.minAge = filters.minAge;
@@ -169,4 +170,29 @@ export class UsersService {
         return this.http.get<userResponse>(`${URL}/user/${this.filters.sex}/${this.filters.size}/${this.filters.minAge}/${this.filters.maxAge}`);
     }
 
+    saveLike(targetId, userId) {
+        const data = { targetId, userId }
+        this.http.post(`${URL}/swipe/${userId}/${targetId}`, data)
+            .subscribe(resp => {
+                console.log(resp);
+                if (resp['ok']) {
+                    console.log("OK")
+                } else {
+                    console.log("NOT OK")
+                }
+            });
+    }
+
+    checkIfMatch(targetId, userId) {
+        const data = { targetId, userId }
+        this.http.post(`${URL}/swipe/${userId}/${targetId}`, data)
+            .subscribe(resp => {
+                console.log(resp);
+                if (resp['ok']) {
+                    console.log("MATCH")
+                } else {
+                    console.log("NOT MATCH")
+                }
+            });
+    }
 }

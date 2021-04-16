@@ -8,7 +8,7 @@ import { UsersService } from 'src/app/services/users.service';
     templateUrl: './card.page.html',
     styleUrls: ['./card.page.scss'],
 })
-export class CardPage implements OnInit {
+export class CardPage {
 
     dogs: any[] = [];
 
@@ -19,10 +19,12 @@ export class CardPage implements OnInit {
 
     start: number = this.sliceService.getStart()
 
-    async ngOnInit() {
+
+
+    public async ionViewWillEnter() {
         try {
-            const filters = await this.userService.getFilters();
-            console.log("OnInit", filters);
+            await this.userService.getFilters();
+            this.dogs = [];
         } catch (error) {
             console.error(error);
         }
@@ -31,8 +33,7 @@ export class CardPage implements OnInit {
                 this.dogs.push(...res.users);
             })
         console.log(this.dogs)
-    }
-
+    };
 
 }
 

@@ -6,6 +6,7 @@ import { Storage } from '@ionic/storage';
 import { NavController } from '@ionic/angular';
 
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
+import Swal from 'sweetalert2';
 
 const URL = environment.URL;
 
@@ -175,23 +176,19 @@ export class UsersService {
         this.http.post(`${URL}/swipe/${userId}/${targetId}`, data)
             .subscribe(resp => {
                 console.log(resp);
-                if (resp['ok']) {
-                    console.log("OK")
-                } else {
-                    console.log("NOT OK")
-                }
             });
     }
 
     checkIfMatch(targetId, userId) {
-        const data = { targetId, userId }
-        this.http.post(`${URL}/swipe/${userId}/${targetId}`, data)
+        this.http.get(`${URL}/swipe/${targetId}/${userId}`)
             .subscribe(resp => {
                 console.log(resp);
-                if (resp['ok']) {
-                    console.log("MATCH")
-                } else {
-                    console.log("NOT MATCH")
+                if (resp['swipe'] !== null) {
+                    Swal.fire(
+                        'Match!',
+                        'Envíale un mensaje para comenzar la interacción',
+                        'success'
+                    )
                 }
             });
     }

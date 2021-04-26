@@ -53,8 +53,10 @@ export class DogComponent implements OnInit {
         let user = this.usersService.getUser();
         let userId = user._id;
         this.usersService.saveLike(this.id, userId);
-        this.usersService.checkIfMatch(this.id, userId);
-        console.log(userId, " likes ", this.id);
+        console.log('user id', userId)
+        setTimeout(() => {
+            this.usersService.checkIfMatch(this.id, userId);
+        }, 100)
         document.getElementById('card').classList.remove('animate__fadeInRight')
         document.getElementById('card').classList.add('animate__fadeOutLeft')
         setTimeout(() => {

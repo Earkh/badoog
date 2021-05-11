@@ -17,8 +17,12 @@
       [routerLink]="setting.redirectTo"
       detail
     >
-      <ion-icon [name]="setting.icon" slot="start"></ion-icon>
+      <ion-icon [name]="setting.icon" (click)="setting.function" slot="start"></ion-icon>
       {{ setting.name }}
+    </ion-item>
+    <ion-item (click)="logout()" [routerLink]="" detail>
+        <ion-icon name="exit-outline" slot="start"></ion-icon>
+        Cerrar sesión
     </ion-item>
   </ion-list>
 </ion-content>

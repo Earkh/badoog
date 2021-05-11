@@ -13,7 +13,7 @@ export class CardPage {
     dogs: any[] = [];
 
     constructor(
-        private sliceService: SliceService,
+        public sliceService: SliceService,
         private userService: UsersService
     ) { }
 

@@ -17,7 +17,7 @@ export class DogComponent implements OnInit {
     @Input() id: string;
     @Input() name: string;
     @Input() sex: string;
-    @Input() age: number;
+    @Input() age: string;
     @Input() size: string;
     @Input() desc: string;
     @Input() img: string;

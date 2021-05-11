@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    URL: 'http://192.168.1.140:3000'
+    URL: 'https://badoog-server.airam.dev'
 };
 
 /*

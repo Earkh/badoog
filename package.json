@@ -29,6 +29,7 @@
     "@ionic/storage": "^2.3.1",
     "animate.css": "^4.1.1",
     "cordova-android": "9.0.0",
+    "cordova-browser": "6.0.0",
     "cordova-sqlite-storage": "^5.1.0",
     "rxjs": "~6.6.0",
     "sweetalert2": "^10.16.6",
@@ -91,6 +92,9 @@
       },
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-file-transfer": {}
-    }
+    },
+    "platforms": [
+      "browser"
+    ]
   }
 }

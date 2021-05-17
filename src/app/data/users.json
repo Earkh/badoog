@@ -1,0 +1,121 @@
+[{
+  "_id": {
+    "$oid": "6053c655b16c590880c6ac6c"
+  },
+  "name": "Lucky",
+  "email": "airam.dev@gmail.com",
+  "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+  "age": 2,
+  "size": "mediano",
+  "sex": "macho",
+  "desc": "Si tu pelota no te cabe en la boca no es tu pelota.",
+  "img": "6053c655b16c590880c6ac6c.jpg"
+},{
+  "_id": {
+    "$oid": "6053c655b16c590880c6ac6d"
+  },
+  "name": "Arya",
+  "email": "airam.cs90@gmail.com",
+  "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+  "age": 2,
+  "size": "grande",
+  "sex": "hembra",
+  "desc": "Dejad que los gatos se acerquen a mí",
+  "img": "6053c655b16c590880c6ac6d"
+},{
+  "_id": {
+    "$oid": "6053c655b16c590880c6ac6e"
+  },
+  "name": "Greta",
+  "email": "test@test.com",
+  "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+  "age": 9,
+  "size": "pequeño",
+  "sex": "hembra",
+  "desc": "Esa es MI comida",
+  "img": "6053c655b16c590880c6ac6e"
+},{
+  "_id": {
+    "$oid": "6053c655b16c590880c6ac6f"
+  },
+  "name": "Bimba",
+  "email": "test1@test.com",
+  "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+  "age": 5,
+  "size": "pequeño",
+  "sex": "hembra",
+  "desc": "Suaaaaaaave",
+  "img": "6053c655b16c590880c6ac6f"
+},{
+  "_id": {
+    "$oid": "6053c655b16c590880c6ac70"
+  },
+  "name": "Candela",
+  "email": "test2@test.com",
+  "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+  "age": 7,
+  "size": "mediano",
+  "sex": "hembra",
+  "desc": "Me encanta comer en tu cama y llenar todo de pelos",
+  "img": "6053c655b16c590880c6ac70"
+},{
+  "_id": {
+    "$oid": "6053c655b16c590880c6ac71"
+  },
+  "name": "Gofio",
+  "email": "test3@test.com",
+  "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+  "age": 6,
+  "size": "mediano",
+  "sex": "macho",
+  "desc": "Alma libre",
+  "img": "6053c655b16c590880c6ac71"
+},{
+  "_id": {
+    "$oid": "6053c655b16c590880c6ac72"
+  },
+  "name": "Togo",
+  "email": "test4@test.com",
+  "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+  "age": 1,
+  "size": "mediano",
+  "sex": "macho",
+  "desc": "Corro como si me persiguieran siempre",
+  "img": "6053c655b16c590880c6ac72"
+},{
+  "_id": {
+    "$oid": "6053c655b16c590880c6ac73"
+  },
+  "name": "Doge",
+  "email": "test5@test.com",
+  "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+  "age": 9,
+  "size": "grande",
+  "sex": "macho",
+  "desc": "Wow, such food, very very tasty",
+  "img": "6053c655b16c590880c6ac73"
+},{
+  "_id": {
+    "$oid": "6053c655b16c590880c6ac74"
+  },
+  "name": "Luna",
+  "email": "test6@test.com",
+  "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+  "age": 8,
+  "size": "grande",
+  "sex": "hembra",
+  "desc": "Me gustan los sofás y las golosinas",
+  "img": "6053c655b16c590880c6ac74"
+},{
+  "_id": {
+    "$oid": "6053c655b16c590880c6ac75"
+  },
+  "name": "Rex",
+  "email": "test7@test.com",
+  "password": "$2b$10$q0SVfd.WoWQoRB2ig6cbZenQdHXWgpvmBBAo5KWj5Ma1IpBEYSTTa",
+  "age": 5,
+  "size": "grande",
+  "sex": "macho",
+  "desc": "Perro policía",
+  "img": "6053c655b16c590880c6ac75"
+}]

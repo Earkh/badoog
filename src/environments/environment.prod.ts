@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    URL: 'https://badoog.airam.dev'
+    URL: 'https://badoog-server.herokuapp.com'
 };

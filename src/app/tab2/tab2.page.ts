@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { UsersService } from '../services/users.service';
 
 @Component({
     selector: 'app-tab2',
@@ -7,9 +6,5 @@ import { UsersService } from '../services/users.service';
     styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
     constructor() { }
-
-
-
 }

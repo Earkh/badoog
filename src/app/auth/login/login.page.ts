@@ -5,8 +5,6 @@ import { UsersService } from 'src/app/services/users.service';
 import { UiServiceService } from 'src/app/services/ui-service.service'
 import { User } from 'src/app/interfaces/interfaces';
 
-
-
 @Component({
     selector: 'app-login',
     templateUrl: './login.page.html',
@@ -18,8 +16,8 @@ export class LoginPage {
     @ViewChild('slide') slides: IonSlides;
 
     loginUser = {
-        email: 'airam.dev@gmail.com',
-        password: '123456'
+        email: '',
+        password: ''
     };
 
     registerData: User = {

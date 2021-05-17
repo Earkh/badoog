@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SliceService } from 'src/app/services/slice.service';
 import { UsersService } from 'src/app/services/users.service';
 

@@ -1,6 +1,6 @@
 {
-    "name": "app",
-    "short_name": "app",
+    "name": "Badoog",
+    "short_name": "Badoog",
     "theme_color": "#ffffff",
     "background_color": "#fafafa",
     "display": "standalone",

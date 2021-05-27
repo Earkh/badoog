@@ -84,6 +84,11 @@ export class ProfilePage implements OnInit {
     async update(fUpdate: NgForm) {
 
         if (fUpdate.invalid) return;
+        if (this.checkSex) {
+            this.user.sex = "hembra";
+        } else {
+            this.user.sex = "macho";
+        }
 
         const update = await this.userService.update(this.user);
         if (update) {

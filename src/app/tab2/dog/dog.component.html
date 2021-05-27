@@ -1,36 +1,36 @@
 <ion-grid fixed>
-  <ion-row>
-    <ion-col size="12" size-md="9" size-lg="6">
-      <ion-card id="card" class="animate__animated animate__fadeInRight">
-        <ion-img src="{{ img }}"></ion-img>
-        <ion-card-header>
-          <ion-card-title>{{ name }}, {{ age }} años</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <p>{{ desc }}</p>
-          <br />
-          <ion-buttons>
-            <ion-fab-button (click)="like($event)" color="success" slot="start">
-              <img src="assets/icon/bone.png" />
-            </ion-fab-button>
-            <ion-button
-              (click)="presentModal()"
-              shape="round"
-              size="small"
-              color="secondary"
-            >
-              <ion-icon
-                slot="icon-only"
-                name="add-circle-outline"
-                icon="add-circle-outline"
-              ></ion-icon>
-            </ion-button>
-            <ion-fab-button (click)="dislike($event)" color="danger" slot="end">
-              <img src="assets/icon/poo.png" />
-            </ion-fab-button>
-          </ion-buttons>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
+    <ion-row>
+        <ion-col size="12" size-md="9" size-lg="6">
+        <ion-card id="card" class="animate__animated animate__fadeInRight">
+            <ion-img src="{{ img }}"></ion-img>
+            <ion-card-header>
+                <ion-card-title>{{ name }}, {{ age }} años</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <p>{{ desc }}</p>
+                <br />
+                <ion-buttons>
+                    <ion-fab-button (click)="like($event)" color="success" slot="start">
+                        <img src="assets/icon/bone.png" />
+                    </ion-fab-button>
+                    <ion-button
+                    (click)="presentModal()"
+                    shape="round"
+                    size="small"
+                    color="secondary"
+                    >
+                        <ion-icon
+                            slot="icon-only"
+                            name="add-circle-outline"
+                            icon="add-circle-outline"
+                        ></ion-icon>
+                    </ion-button>
+                    <ion-fab-button (click)="dislike($event)" color="danger" slot="end">
+                        <img src="assets/icon/poo.png" />
+                    </ion-fab-button>
+                </ion-buttons>
+            </ion-card-content>
+        </ion-card>
+        </ion-col>
+    </ion-row>
 </ion-grid>

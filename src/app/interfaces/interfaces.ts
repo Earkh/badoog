@@ -14,3 +14,14 @@ export interface User {
     desc?: string;
     img?: string;
 }
+
+export interface Filter {
+    sex?: string;
+    size?: string;
+    age?: {
+        lower: number;
+        upper: number;
+    };
+    minAge?: number;
+    maxAge?: number;
+}

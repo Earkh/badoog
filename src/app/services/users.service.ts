@@ -1,12 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { User, userResponse } from '../interfaces/interfaces';
+import { Filter, User, userResponse } from '../interfaces/interfaces';
 import { Storage } from '@ionic/storage';
 import { NavController } from '@ionic/angular';
 
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import Swal from 'sweetalert2';
+import { UiServiceService } from './ui-service.service';
 
 const URL = environment.URL;
 
@@ -16,17 +17,13 @@ const URL = environment.URL;
 export class UsersService {
 
     token: string = null;
-    filters: any = {
-        sex: null,
-        size: null,
-        minAge: null,
-        maxAge: null
-    }
+    filters: Filter = {};
     private user: User = {};
 
     constructor(private http: HttpClient,
         private storage: Storage,
         private navController: NavController,
+        private UiService: UiServiceService,
         private fileTransfer: FileTransfer) { }
 
 
@@ -120,8 +117,10 @@ export class UsersService {
         await this.storage.set('token', token)
     }
 
-    async saveFilters(filters: string) {
+    async saveFilters(filters: Filter) {
         await this.storage.set('filters', filters)
+        this.UiService.presentToast('Filtro actualizado');
+        console.log(filters);
     }
 
     async getFilters() {

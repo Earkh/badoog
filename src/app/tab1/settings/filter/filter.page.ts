@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Filter } from 'src/app/interfaces/interfaces';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -8,31 +9,25 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class FilterPage implements OnInit {
 
-    filter: any = {
-        age: null,
-        minAge: null,
-        maxAge: null,
-        size: null,
-        sex: null
-    };
-    userFilters: any = {
-        minAge: null,
-        maxAge: null,
-        size: null,
-        sex: null
-    }
+    filter: Filter = {};
+    userFilters: Filter = {};
 
     constructor(private userService: UsersService) { }
 
-    ngOnInit() {
+    async ngOnInit() {
+        const filter = await this.userService.getFilters();
+
+        this.filter.age = { lower: filter.minAge, upper: filter.maxAge };
+        this.filter.sex = filter.sex;
+        this.filter.size = filter.size;
     }
 
-    saveFilters() {
+    updateFilters() {
         this.userFilters.minAge = this.filter.age.lower;
         this.userFilters.maxAge = this.filter.age.upper;
         this.userFilters.size = this.filter.size;
         this.userFilters.sex = this.filter.sex
-        console.log(this.userFilters);
         this.userService.saveFilters(this.userFilters);
     }
+
 }

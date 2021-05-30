@@ -44,11 +44,13 @@ export class LoginPage {
         if (fLogin.invalid) { return }
 
         const validUser = await this.userService.login(this.loginUser.email, this.loginUser.password);
-        if (validUser) {
-            this.navController.navigateRoot('/main/tabs/tab2', { animated: true })
-        } else {
-            this.UiService.presentAlert('Contraseña incorrecta');
-        }
+        setTimeout(() => {
+            if (validUser) {
+                this.navController.navigateRoot('/main/tabs/tab2', { animated: true })
+            } else {
+                this.UiService.presentAlert('Contraseña incorrecta');
+            }
+        }, 600)
     }
 
     async register(fRegister: NgForm) {
@@ -57,14 +59,13 @@ export class LoginPage {
 
         const valido = await this.userService.register(this.registerData);
 
-        if (valido) {
-            this.navController.navigateRoot('/main/tabs/tab1/profile', { animated: true })
-        } else {
-            this.UiService.presentAlert('Ya existe un usuario con ese correo');
-        }
-
-        console.log(this.registerData)
-        console.log(fRegister.valid)
+        setTimeout(() => {
+            if (valido) {
+                this.navController.navigateRoot('/main/tabs/tab1/profile', { animated: true })
+            } else {
+                this.UiService.presentAlert('Ya existe un usuario con ese correo');
+            }
+        }, 600)
     }
 
     showRegister() {

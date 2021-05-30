@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="dogs.length > 0; else noDogs">
   <app-dog
     *ngFor='let dog of dogs | slice:this.sliceService.getStart():this.sliceService.getEnd()'
     id="{{dog._id}}"
@@ -16,3 +16,14 @@
     img="https://badoog-server.herokuapp.com/user/imagen/{{dog._id}}/{{dog._id}}.jpg"
   ></app-dog>
 </ion-content>
+
+  
+<ng-template #noDogs>
+    <ion-content padding>
+        <ion-row style="height: 100%">
+            <ion-col  class="flex">
+                <p>Añade filtros para comenzar a ver mascotas</p>
+            </ion-col>
+        </ion-row>
+    </ion-content>
+</ng-template>

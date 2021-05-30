@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "927345674578",
+    "project_id": "badoog-2da72",
+    "storage_bucket": "badoog-2da72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927345674578:android:dcd3847134738a4824d28b",
+        "android_client_info": {
+          "package_name": "badoog.airam.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927345674578-kmp0ldu1jg8pfr7k0lf8mhvmfp4ho36p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-4dMjH4aqQrUW41y8H3NdPXlCfYJbECI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927345674578-kmp0ldu1jg8pfr7k0lf8mhvmfp4ho36p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
